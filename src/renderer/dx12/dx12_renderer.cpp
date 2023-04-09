@@ -83,7 +83,7 @@ ComPtr<IDXGIFactory4> cg::renderer::dx12_renderer::get_dxgi_factory()
 	}
 #endif
 	ComPtr<IDXGIFactory4> dxgi_factory;
-	THROW_IF_FAILED(CreateDXGIFactory2(dxgi_factory_flags, IID_PPV_ARGS_Helper(&dxgi_factory)))
+	THROW_IF_FAILED(CreateDXGIFactory2(dxgi_factory_flags, IID_PPV_ARGS(&dxgi_factory)));
 	return dxgi_factory;
 }
 
